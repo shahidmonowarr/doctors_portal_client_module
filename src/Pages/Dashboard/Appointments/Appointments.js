@@ -12,9 +12,9 @@ import { Link } from 'react-router-dom';
 const Appointments = ({ date }) => {
     const { user, token } = useAuth();
     const [appointments, setAppointments] = useState([])
-
+    // http://localhost:5000/
     useEffect(() => {
-        const url = `https://stark-caverns-04377.herokuapp.com/appointments?email=${user.email}&date=${date.toLocaleDateString()}`
+        const url = `http://localhost:5000/appointments?email=${user.email}&date=${date.toLocaleDateString()}`
         fetch(url, {
             headers: {
                 'authorization': `Bearer ${token}`
